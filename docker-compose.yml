@@ -13,7 +13,7 @@ services:
     image: nginx:latest
     container_name: nginx_reverse_proxy
     ports:
-      - "50000:80" # Reindirizza la porta 80 dell'host al container
+      - "80:80" # Reindirizza la porta 80 dell'host al container
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro  # Configurazione personalizzata di Nginx
     restart: unless-stopped
