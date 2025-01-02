@@ -4,7 +4,7 @@ services:
     image: nginx:latest
     container_name: www.rossetto.ovh
     volumes:
-      - ./src/HomePage:/usr/share/nginx/html
+      - ./src:/usr/share/nginx/html
     expose:
       - "80"  # Il sito web è esposto sulla porta 80 all'interno del container
     restart: unless-stopped
