@@ -129,7 +129,7 @@ section.animate {
 #page1 .social img { width: 50px; padding-left: 25px; height: 50px; }
 
 #containerFrasi {
-  width: 500px;
+  width: auto;
   padding-top: 40px;
   font-size: 24px;
 }
@@ -247,7 +247,9 @@ footer .container {
 }
 
 @media (max-width: 768px) {
-  body { padding-top: 120px; }
+  body {
+    padding-top: 120px; 
+  }
 
   .navbar {
     display: flex;
@@ -284,14 +286,17 @@ footer .container {
     text-align: center;
   }
 
-  #page1 #container { margin-top: -30px; }
-  #page1 h1 { margin-left: 20px; }
+  #page1 #container { margin-top: -30px; width: 100%;}
+  #page1 h1 { margin-left: 20px; max-width: 100%;}
 
   #page1 img {
-    padding-top: 100px;
     padding-left: 0;
     max-width: 100%;
     height: auto;
+  }
+  #containerFrasi{
+    padding-top: 150px;
+    padding-left: 10%;
   }
 
   .social { padding-top: 0; }
@@ -301,8 +306,12 @@ footer .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
   }
+  #pageAbout h1{
+    font-size: 3em;
+  }
+
+
 
   #pageAbout #immagini {
     flex-direction: column;
@@ -330,6 +339,18 @@ footer .container {
   }
 
   #pageSkills{
-    height: 600px;
+    height: auto;
+    flex-direction: column;
+    align-items:center;
+  }
+  #pageSkills  #immagini{
+    flex-direction: column;
+    align-items:center;
+  }
+  #pageSkills img {
+    max-width: 70%;
+    margin-left: 10%;
+    padding-top: 40px;
+    transition: transform 0.3s ease;
   }
 }
